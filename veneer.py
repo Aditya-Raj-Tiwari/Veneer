@@ -14,9 +14,15 @@ class Marketplace:
         self.listings.append(new_listing)
     def remove_listings(self,expired_listing):
         self.listings.remove(expired_listing)
-    def show_listingsI(self):
+    def show_listings(self):
         for items in self.listings:
             print(items)
+
+class Client:
+    def __init__(self,name,location,is_museum):
+        self.name = name
+        self.location = location
+        self.is_museum = is_museum
 
 
 
@@ -27,4 +33,7 @@ girl_with_mandolin = Art('Picasso, Pablo', 'Girl with a Mandolin (Fanny Tellier)
 print(girl_with_mandolin)
 
 vaneer = Marketplace()
-print(vaneer.show_listingsI())
+print(vaneer.show_listings())
+
+edytta = Client("Edytta Halpirt","Private Collection", is_museum=False)
+moma = Client("The MOMA", "New York", is_museum=True)
